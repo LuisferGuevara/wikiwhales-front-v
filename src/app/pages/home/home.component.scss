@@ -1,5 +1,5 @@
 section {
-  height: 80VH;
+  height: 80vh;
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
@@ -15,11 +15,10 @@ section {
       font-weight: bolder;
       text-transform: uppercase;
       letter-spacing: 1px;
-      @media screen and (max-width:500px) {
+      @media screen and (max-width: 500px) {
         width: 80%;
-margin: 0 auto;
+        margin: 0 auto;
         font-size: 1.3em;
-        
       }
     }
     p {
@@ -38,18 +37,16 @@ margin: 0 auto;
     img {
       width: 200px;
     }
-    @media screen and (max-width:780px) {
+    @media screen and (max-width: 780px) {
       flex-wrap: wrap;
       gap: 40px;
-      img{
+      img {
         width: 40%;
         height: 300px;
-        &:last-of-type{
+        &:last-of-type {
           margin: 0 auto;
         }
       }
-      
     }
-    
   }
 }

@@ -8,9 +8,8 @@ describe('NewWhaleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewWhaleComponent ]
-    })
-    .compileComponents();
+      declarations: [NewWhaleComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NewWhaleComponent);
     component = fixture.componentInstance;

@@ -10,13 +10,10 @@ header {
   max-width: 1400px;
   margin: 0 auto;
 
-
   .nav {
     width: 100%;
     @media screen and (max-width: 500px) {
-
-transform: translate(-3%);
-      
+      transform: translate(-3%);
     }
   }
   .title {
@@ -32,9 +29,7 @@ transform: translate(-3%);
       letter-spacing: 2px;
       @media screen and (max-width: 500px) {
         font-size: 3.4em;
-        
       }
-
     }
 
     .content h2:nth-child(1) {
