@@ -1,0 +1,35 @@
+<form [formGroup]="whaleForm" (ngSubmit)="onSubmit()">
+  <h2>Here you can Edit this Whale</h2>
+  <div class="form--box">
+    <label>
+      Name *
+      <input type="text" formControlName="name" />
+    </label>
+    <label>
+      Image URL *
+      <input
+        type="file"
+        formControlName="image"
+        (change)="onFileChange($event)"
+      />
+    </label>
+    <label>
+      Description *
+      <textarea type="text" formControlName="description"></textarea>
+    </label>
+    <label>
+      Length
+      <input type="text" formControlName="length" />
+    </label>
+    <label>
+      Weight
+      <input type="text" formControlName="weight" />
+    </label>
+    <label>
+      Scientific Name
+      <input type="text" formControlName="scientificName" />
+    </label>
+  </div>
+
+  <button>Send</button>
+</form>

@@ -1,0 +1,32 @@
+<div *ngIf="!myWhale" class="loading">
+  <h2>LOOOOOOAAAADING WHALE . . .</h2>
+  <img
+    src="https://cdn.dribbble.com/users/124845/screenshots/855140/whale400x300.gif"
+    alt="gif loading"
+  />
+</div>
+<section class="detail--section">
+  <div class="detail--box">
+    <h2>{{ myWhale?.name }}</h2>
+    <div class="detail--info">
+      <div class="img--box">
+        <p>
+          <span>Scientific Name: </span><em>{{ myWhale?.scientificName }}</em>
+        </p>
+        <img src="{{ myWhale?.image }}" alt="{{ myWhale?.name }}" />
+      </div>
+      <div class="detail--meta">
+        <p><span>Length:</span> {{ myWhale?.length }}</p>
+        <p><span>Weight:</span> {{ myWhale?.weight }}</p>
+        <p><span>Description:</span> {{ myWhale?.description }}</p>
+      </div>
+    </div>
+    <div class="buttons--box">
+      <button routerLink="/whales">&#x2039; All Whales</button>
+      <button (click)="deleteWhale()">Delete X</button>
+      <button routerLink="/updateWhale/{{ myWhale?._id }}">
+        Update &#8250;
+      </button>
+    </div>
+  </div>
+</section>

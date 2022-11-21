@@ -1,0 +1,26 @@
+section{
+    height: 3vh;
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 222, 179, 0.392);
+    width: 80%;
+    margin: 2% auto;
+    padding: .2em .8em;
+    border-radius: 50px 15px;
+    img{
+        height: 1.4em;
+        padding-right: .5em;
+    }
+    p{
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: whitesmoke;
+        span{
+            color: tomato;
+        }
+    }
+
+}
