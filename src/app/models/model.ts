@@ -1,16 +1,14 @@
 export interface IWhale {
   _id: number;
   name: string;
-  image: string,
+  image: string;
   scientificName: string;
   length: string;
   weight: string;
   description: string;
 }
 
-export interface CardData{
+export interface CardData {
   imageId: string;
-  state: 'default' |  'flipped' | 'matched';
+  state: 'default' | 'flipped' | 'matched';
 }
-
-

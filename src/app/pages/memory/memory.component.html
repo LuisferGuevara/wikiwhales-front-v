@@ -1,13 +1,18 @@
 <div class="game">
   <h2>Card Memory Game</h2>
 
-  <p>Tap on a card to flip it. You can only flip a maximum of two cards at a time. A match will
-    remove
-    those cards!</p>
+  <p>
+    Tap on a card to flip it. You can only flip a maximum of two cards at a
+    time. A match will remove those cards!
+  </p>
 
   <div class="grid">
-    <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+    <app-game-card
+      *ngFor="let c of cards; let idx = index"
+      [data]="c"
+      (cardClicked)="cardClicked(idx)"
+    >
     </app-game-card>
   </div>
-  <app-footer class="footer"></app-footer> 
+  <app-footer class="footer"></app-footer>
 </div>

@@ -5,34 +5,27 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-whales',
   templateUrl: './whales.component.html',
-  styleUrls: ['./whales.component.scss']
+  styleUrls: ['./whales.component.scss'],
 })
 export class WhalesComponent implements OnInit {
-  
   myWhales?: any[];
-  constructor( private whaleService: WhalesService) { 
-    this.whaleService.getAllWhales().subscribe((data:any) => {
-      console.log(data)
+  constructor(private whaleService: WhalesService) {
+    this.whaleService.getAllWhales().subscribe((data: any) => {
+      console.log(data);
       // this.myWhales = [...data] // no map, pero tambien todos los datos
-      const whaleData: any[] = data.map((whale: IWhale) =>({
+      const whaleData: any[] = data.map((whale: IWhale) => ({
         id: whale._id,
-        name:whale.name,
+        name: whale.name,
         image: whale.image,
         scientificName: whale.scientificName,
         length: whale.length,
         weight: whale.weight,
-        description: whale.description
-      }))
+        description: whale.description,
+      }));
 
-      this.myWhales = [...whaleData]
+      this.myWhales = [...whaleData];
     });
-
-
-
-    
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

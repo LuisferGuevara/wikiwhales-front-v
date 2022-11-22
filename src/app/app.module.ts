@@ -23,7 +23,6 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import { MemoryComponent } from './pages/memory/memory.component';
 import { RestartDialogComponent } from './pages/memory/restart-dialog/restart-dialog.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +39,6 @@ import { RestartDialogComponent } from './pages/memory/restart-dialog/restart-di
     GameCardComponent,
     MemoryComponent,
     RestartDialogComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -50,7 +48,7 @@ import { RestartDialogComponent } from './pages/memory/restart-dialog/restart-di
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

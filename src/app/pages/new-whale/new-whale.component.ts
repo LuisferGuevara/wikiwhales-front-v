@@ -48,7 +48,7 @@ export class NewWhaleComponent implements OnInit {
       image: file,
     });
   }
-  
+
   onSubmit() {
     console.log(this.newWhale);
     const formData = new FormData();

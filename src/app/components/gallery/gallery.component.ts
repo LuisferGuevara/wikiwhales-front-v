@@ -13,6 +13,7 @@ export class GalleryComponent implements OnInit {
     this.whaleService.getAllWhales().subscribe((data: any) => {
       console.log('mi data', data);
       // this.myWhales = [...data] // no map, pero tambien todos los datos
+      
       const whaleData: any[] = data.map((whale: IWhale) => ({
         id: whale._id,
         name: whale.name,
