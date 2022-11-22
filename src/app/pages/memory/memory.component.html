@@ -5,8 +5,9 @@
     remove
     those cards!</p>
 
-  <div class="grid p-16">
+  <div class="grid">
     <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
     </app-game-card>
   </div>
+  <app-footer class="footer"></app-footer> 
 </div>

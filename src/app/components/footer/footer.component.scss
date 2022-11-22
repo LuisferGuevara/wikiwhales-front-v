@@ -17,9 +17,13 @@ section {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: whitesmoke;
+    color: #222;
     span {
       color: tomato;
+    }
+    @media screen and (max-width:600px) {
+      font-size: .8em;
+      
     }
   }
 }

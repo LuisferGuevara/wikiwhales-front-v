@@ -6,16 +6,15 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-memory',
   templateUrl: './memory.component.html',
-  styleUrls: ['./memory.component.scss']
+  styleUrls: ['./memory.component.scss'],
 })
 export class MemoryComponent implements OnInit {
-
   cardImages = [
     'QnBrjY-nFUs',
     'p5nDU-d3Y0s',
     'wU2Nx1yoDQc',
     'PMdNsBzn2To',
-    '9JrBiphz0e0'
+    '9JrBiphz0e0',
   ];
 
   cards: CardData[] = [];
@@ -25,14 +24,13 @@ export class MemoryComponent implements OnInit {
   matchedCount = 0;
 
   shuffleArray(anArray: any[]): any[] {
-    return anArray.map(a => [Math.random(), a])
+    return anArray
+      .map((a) => [Math.random(), a])
       .sort((a, b) => a[0] - b[0])
-      .map(a => a[1]);
+      .map((a) => a[1]);
   }
 
-  constructor(private dialog: MatDialog) {
-
-  }
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.setupCards();
@@ -43,12 +41,11 @@ export class MemoryComponent implements OnInit {
     this.cardImages.forEach((image) => {
       const cardData: CardData = {
         imageId: image,
-        state: 'default'
+        state: 'default',
       };
 
       this.cards.push({ ...cardData });
       this.cards.push({ ...cardData });
-
     });
 
     this.cards = this.shuffleArray(this.cards);
@@ -64,11 +61,9 @@ export class MemoryComponent implements OnInit {
       if (this.flippedCards.length > 1) {
         this.checkForCardMatch();
       }
-
     } else if (cardInfo.state === 'flipped') {
       cardInfo.state = 'default';
       this.flippedCards.pop();
-
     }
   }
 
@@ -76,7 +71,8 @@ export class MemoryComponent implements OnInit {
     setTimeout(() => {
       const cardOne = this.flippedCards[0];
       const cardTwo = this.flippedCards[1];
-      const nextState = cardOne.imageId === cardTwo.imageId ? 'matched' : 'default';
+      const nextState =
+        cardOne.imageId === cardTwo.imageId ? 'matched' : 'default';
       cardOne.state = cardTwo.state = nextState;
 
       this.flippedCards = [];
@@ -86,7 +82,7 @@ export class MemoryComponent implements OnInit {
 
         if (this.matchedCount === this.cardImages.length) {
           const dialogRef = this.dialog.open(RestartDialogComponent, {
-            disableClose: true
+            disableClose: true,
           });
 
           dialogRef.afterClosed().subscribe(() => {
@@ -94,7 +90,6 @@ export class MemoryComponent implements OnInit {
           });
         }
       }
-
     }, 1000);
   }
 
@@ -102,5 +97,4 @@ export class MemoryComponent implements OnInit {
     this.matchedCount = 0;
     this.setupCards();
   }
-
 }

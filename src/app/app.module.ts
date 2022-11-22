@@ -1,4 +1,3 @@
-import { CardService } from './services/card.service';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -53,7 +52,7 @@ import { RestartDialogComponent } from './pages/memory/restart-dialog/restart-di
     MatIconModule,
     MatDialogModule
   ],
-  providers: [CardService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
