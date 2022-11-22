@@ -1,3 +1,21 @@
+.game--link {
+  margin-left: 10vw;
+  text-align: center;
+  height: 20px;
+  color: #414445;
+  text-decoration: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 120px 0 0 0 #54b3d6;
+    color: white;
+  }
+}
 nav {
   width: 100%;
   display: flex;
@@ -17,7 +35,7 @@ nav {
       justify-content: center;
       a {
         text-align: center;
-height: 20px;
+        height: 20px;
         color: #414445;
         text-decoration: none;
         font-size: 0.9em;

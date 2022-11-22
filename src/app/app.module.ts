@@ -1,3 +1,4 @@
+import { CardService } from './services/card.service';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -14,8 +15,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { MemoryComponent } from './pages/memory/memory.component';
+import { RestartDialogComponent } from './pages/memory/restart-dialog/restart-dialog.component';
 
 
 @NgModule({
@@ -31,6 +38,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     CardComponent,
     GalleryComponent,
+    GameCardComponent,
+    MemoryComponent,
+    RestartDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,8 +49,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [CardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
